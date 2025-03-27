@@ -1,91 +1,51 @@
-File Organizer Bot
+# File Organizer Bot
 
-Overview
+A Python script that automatically organizes files in a folder by their file types (extensions). 
+Creates subfolders and moves files into appropriate categories. Includes both CLI and GUI versions.
 
-File Organizer Bot is a Python-based automation tool that organizes files in a specified folder by their file type (e.g., .pdf, .jpg, .mp3). It creates subfolders like "Images", "Documents", etc., and moves files into them, keeping your directories clean and structured.
+## Features
+- Organizes files into categories: Images, Documents, Videos, Audio, Archives, etc.
+- Handles unknown file types in "Others" folder
+- GUI version with progress tracking (tkinter)
+- Optional duplicate file remover (MD5 hash based)
+- Cross-platform (Windows/macOS/Linux)
 
-Features
+## Requirements
+- Python 3.x
+- No additional packages required for basic version
+- Tkinter (usually comes with Python) for GUI version
 
-Automatically sorts files based on their extensions.
-Creates categorized subfolders (e.g., "Images", "Docs", "Videos").
-Lightweight and easy to use via command line.
-Customizable for additional file types.
+## How to Use
 
-Tech Stack
+### Basic Version (Command Line)
+1. Run `file_organizer.py`
+2. Enter the folder path you want to organize when prompted
+3. Files will be sorted into subfolders automatically
 
-Python: Core scripting language.
-Modules: os, shutil for file handling and organization.
-How to Run
+### GUI Version
+1. Run `file_organizer_gui.py`
+2. Click "Browse" to select a folder
+3. Click "Organize Files"
+4. View progress in the status bar
 
-Prerequisites:
+### Duplicate File Remover
+The script includes an optional function to remove duplicate files based on content.
 
-Python 3.x installed on your system.
-Clone or download this repository:
-git clone https://github.com/yourusername/FileOrganizerBot.git
+## File Categories
+- Images: .jpg, .png, .gif, etc.
+- Documents: .pdf, .docx, .xlsx, etc.
+- Videos: .mp4, .mov, .avi, etc.
+- Audio: .mp3, .wav, etc.
+- Archives: .zip, .rar, etc.
+- Executables: .exe, .msi, etc.
+- Code: .py, .js, .html, etc.
+- Data: .csv, .xml, etc.
+- Others: All other file types
 
-Setup:
-Navigate to the project folder:
-cd FileOrganizerBot
-(Optional) Install dependencies (if any):
-pip install -r requirements.txt
-Run the Script:
-Execute the script in terminal:
-python file_organizer.py
-Enter the folder path you want to organize when prompted.
+## Notes
+- Always back up important files before running
+- The script won't modify system folders or hidden files
+- Tested on Windows 10/11 and macOS
 
-Example:
-Input folder: C:/Users/Mava/Downloads
-Output: Files moved to Images/, Docs/, Videos/, etc.
-Sample Output
-
-Before:
-
-text
-
-Collapse
-
-Wrap
-
-Copy
-Downloads/
-├── photo.jpg
-├── report.pdf
-├── song.mp3
-├── video.mp4
-After:
-
-text
-
-Collapse
-
-Wrap
-
-Copy
-Downloads/
-├── Images/
-│   └── photo.jpg
-├── Docs/
-│   └── report.pdf
-├── Audio/
-│   └── song.mp3
-├── Videos/
-│   └── video.mp4
-Installation as Executable (Optional)
-Convert to .exe for easy sharing:
-Install PyInstaller: pip install pyinstaller
-Run: pyinstaller --onefile file_organizer.py
-Find the .exe in the dist/ folder.
-Download the pre-built .exe (add link if you upload it).
-Future Enhancements
-GUI interface using tkinter.
-Support for duplicate file detection.
-Cloud integration for remote folder organization.
-
-Why This Project?
-
-Built this to showcase my Python automation skills, leveraging my 2 years of Java experience in logic building and file handling. Quick learner, adapted to Python in a week!
-
-Contact
-
-GitHub: HarshaTechKnight
-Email: sriharsha0413@gmail.com
+## Author
+Sri Harsha M
